@@ -1,0 +1,26 @@
+.color-box {
+    border-radius: 10PX;
+    height: 90PX;
+    background: #FD7948;
+    display: flex;
+    align-items: center;
+    padding-left: 20PX;
+    padding-right: 20PX;
+    overflow: hidden;
+    .shape {
+        position: absolute;
+        &.brown {
+            top: 0;
+            left: 0;
+            background: #E1C296;
+        }
+        &.yellow {
+            background: #FFC103;
+            right: 0;
+            bottom: 0;
+            width: 35%;
+            height: 80%;
+            border-radius: 100% 0 0 0;
+        }
+    }
+}

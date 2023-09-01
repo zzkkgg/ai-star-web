@@ -1,0 +1,27 @@
+.activities {
+    height: 100vh;
+    padding: 10PX 10PX 0;
+    background: #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .banner {
+        height: 80PX;
+        border-radius: 10PX;
+        background: tan;
+    }
+    .list {
+        overflow: hidden;
+        .scroll-view {
+            height: 100%;
+        }
+    }
+    .tabs {
+        .tab-item {
+            &.active {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}

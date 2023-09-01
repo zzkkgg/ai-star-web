@@ -1,0 +1,48 @@
+.home {
+    height: 100vh;
+    overflow-y: auto;
+    .banner {
+        width: 100% !important;
+    }
+    .hot-course-list {
+        display: flex;
+        gap: 10PX;
+        width: 90%;
+        margin: 20PX auto;
+        .hot-course-item {
+            flex: 1;
+            .course-icon {
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+    .course-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10PX;
+        position: relative;
+        padding-bottom: 40PX;
+        .course-card {
+            padding: 5PX;
+            background: #FFFFFF;
+            box-shadow: 0PX 0PX 4PX 0PX rgba(1,6,27,0.2);
+            border-radius: 10PX;
+            .thumbnail-box {
+                overflow: hidden;
+                .image {
+                    width: 100% !important;
+                }
+            }
+            .title {
+                color: #333;
+            }
+        }
+    }
+    .infinite-load {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

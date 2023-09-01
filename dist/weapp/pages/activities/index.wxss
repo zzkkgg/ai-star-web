@@ -1,0 +1,29 @@
+.activities {
+  height: 100vh;
+  padding: 10PX 10PX 0;
+  background: #e8e8e8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.activities .banner {
+  height: 80PX;
+  border-radius: 10PX;
+  background: tan;
+}
+.activities .list {
+  overflow: hidden;
+}
+.activities .list .scroll-view {
+  height: 100%;
+}
+.activities .tabs .tab-item.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+

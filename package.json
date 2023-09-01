@@ -1,0 +1,53 @@
+{
+  "name": "ai-star-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "爱思塔编程",
+  "templateInfo": {
+    "name": "h5-youshu",
+    "typescript": false,
+    "css": "less"
+  },
+  "scripts": {
+    "build:h5": "taro build --type h5",
+    "raw:build:weapp": "taro build --type weapp",
+    "build:weapp": "npm run raw:build:weapp",
+    "dev:h5": "npm run build:h5 -- --watch -n=env",
+    "dev:weapp": "npm run raw:build:weapp -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@tarojs/components": "3.4.14",
+    "@tarojs/plugin-framework-react": "3.4.14",
+    "@tarojs/react": "3.4.14",
+    "@tarojs/runtime": "3.4.14",
+    "@tarojs/taro": "3.4.14",
+    "antd-mobile": "^5.24.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fastclick": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@tarojs/mini-runner": "3.4.14",
+    "@tarojs/webpack-runner": "3.4.14",
+    "@types/react": "^17.0.2",
+    "@types/webpack-env": "^1.13.6",
+    "babel-plugin-import": "^1.13.5",
+    "babel-preset-taro": "3.4.14",
+    "eslint": "^8.12.0",
+    "eslint-config-taro": "3.4.14",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "stylelint": "9.3.0",
+    "taro-plugin-compiler-optimization": "^1.0.4",
+    "webpack-bundle-analyzer": "^4.7.0"
+  }
+}

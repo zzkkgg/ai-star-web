@@ -1,0 +1,91 @@
+.font-bold {
+  font-weight: 600;
+}
+.font-size-12 {
+  font-size: 12PX;
+}
+.font-size-14 {
+  font-size: 14PX;
+}
+.font-size-16 {
+  font-size: 16PX;
+}
+.font-size-18 {
+  font-size: 18PX;
+}
+.font-size-24 {
+  font-size: 24PX;
+}
+.underline {
+  text-decoration: underline;
+}
+.color-white {
+  color: #fff;
+}
+.color-gray {
+  color: #999;
+}
+.bg-gray {
+  background: #e8e8e8;
+}
+.color-black {
+  color: #333;
+}
+.align-center {
+  text-align: center;
+}
+.full-height {
+  height: 100%;
+}
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10PX;
+}
+.m-l-5 {
+  margin-left: 5PX;
+}
+.m-l-10 {
+  margin-left: 10PX;
+}
+.m-t-5 {
+  margin-top: 5PX;
+}
+.m-t-10 {
+  margin-top: 10PX;
+}
+.m-t-20 {
+  margin-top: 20PX;
+}
+.m-r-20 {
+  margin-right: 20PX;
+}
+.m-b-10 {
+  margin-bottom: 10PX;
+}
+.m-b-20 {
+  margin-bottom: 20PX;
+}
+.pos-relative {
+  position: relative;
+}
+.btn::after {
+  display: none;
+}
+.flex-1 {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+[src] {
+  max-width: 100%;
+}
+[class="ql-align-center"] {
+  text-align: center;
+}
+page {
+  font-family: Microsoft YaHei;
+}
+
+
+@import "./common.wxss";

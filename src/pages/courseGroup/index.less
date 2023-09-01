@@ -1,0 +1,50 @@
+.course-group {
+    display: flex;
+    height: 100vh;
+    .group-list {
+        width: 35%;
+        .group-item {
+            border-radius: 10PX 0 0 10PX;
+            color: #000;
+            margin: 10PX 0;
+            display: flex;
+            align-items: center;
+            padding: 10PX;
+            .image {
+                width: 30% !important;
+                margin-right: 3PX;
+            }
+            &.active {
+                background: #4A4A51;
+                box-shadow: 0PX 2PX 4PX 0PX rgba(1,6,27,0.21);
+                color: #fff;
+            }
+        }
+    }
+    .course-list {
+        background: #fff;
+        border-radius: 10PX;
+        overflow: hidden;
+        padding: 10PX;
+        box-sizing: border-box;
+        .scroll-view {
+            height: 100%;
+        }
+        .entity-card {
+            box-shadow: none;
+            .content {
+                overflow: hidden;
+                color: #333;
+                .inner {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+    .image {
+        vertical-align: top;
+    }
+}
