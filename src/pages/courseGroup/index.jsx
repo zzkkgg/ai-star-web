@@ -25,7 +25,7 @@ function CourseGroup() {
             url: '/api/course/typeList',
             data: {
                 page: 1,
-                size: 4,
+                size: 40,
             },
         }).then(({ data }) => {
             setCourseTypeList(data?.list);

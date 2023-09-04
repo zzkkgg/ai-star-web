@@ -1,16 +1,22 @@
 import request from '@/utils/request';
+import Banner from '@/components/Banner';
 import { navigateTo } from '@tarojs/taro';
 import { useEffect, useState } from 'react';
 import { View, Image, Text, ScrollView } from '@tarojs/components';
 import InfiniteScrollHolder from '@/components/InfiniteScrollHolder';
-import aiImg from '@/assets/images/icons/ai.png';
+import bannerImg from './assets/b.png';
 import './index.less';
 
+function toCourseDetailPage(courseId) {
+    navigateTo({
+        url: `/pages/courseDetail/index?id=${courseId}`,
+    });
+}
 export default function Home() {
     const [current, setCurrent] = useState(1);
     const [loading, setLoading] = useState(true);
     const [pageTotal, setPageTotal] = useState(0);
-    const [bannerUrl, setBannerUrl] = useState('');
+    const [bannerUrls, setBannerUrls] = useState(null);
     const [courseList, setCourseList] = useState(null);
     const [courseTypeList, setCourseTypeList] = useState([]);
 
@@ -29,7 +35,7 @@ export default function Home() {
             },
         }).then(({ data }) => {
             if (Array.isArray(data?.list)) {
-                setBannerUrl(data.list[0].bannerImage);
+                setBannerUrls(data.list);
             }
         });
     }
@@ -78,15 +84,7 @@ export default function Home() {
     return (
         <View className="home bg-gray">
             <View className="container full-height">
-                {
-                    bannerUrl && (
-                        <Image
-                            src={bannerUrl}
-                            className="banner"
-                            mode="heightFix"
-                        />
-                    )
-                }
+                <Banner bannerUrls={bannerUrls} />
                 <View className="hot-course-list font-size-14">
                     {
                         courseTypeList?.map(({ typeId, typeName, typeThumb }) => {
@@ -103,7 +101,7 @@ export default function Home() {
                                     <Image
                                         mode="widthFix"
                                         className="course-icon"
-                                        src={typeThumb || aiImg}
+                                        src={typeThumb}
                                     />
                                     <View className="font-size-12 m-t-5">{typeName}</View>
                                 </View>
@@ -111,9 +109,18 @@ export default function Home() {
                         })
                     }
                 </View>
-                <View className="banner-holder m-b-20" />
+                <Image
+                    src={bannerImg}
+                    mode="widthFix"
+                    className="banner m-b-15"
+                    onClick={() => {
+                        if (courseList?.length > 0) {
+                            toCourseDetailPage(courseList[0].courseId);
+                        }
+                    }}
+                />
                 <View className="font-size-14 m-b-10">
-                    <Text className="m-l-10">全部</Text>
+                    <Text className="m-l-10 font-bold">全部</Text>
                 </View>
                 <View className="course-box">
                     <ScrollView
@@ -127,9 +134,7 @@ export default function Home() {
                                         <View
                                             key={courseId}
                                             onClick={() => {
-                                                navigateTo({
-                                                    url: `/pages/courseDetail/index?id=${courseId}`,
-                                                });
+                                                toCourseDetailPage(courseId);
                                             }}
                                             className="course-card align-center"
                                         >

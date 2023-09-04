@@ -37,9 +37,6 @@ function CourseDetail() {
                 )
             }
             <View className="title font-size-16 font-bold m-b-10 align-center">{detail.courseTitle}</View>
-            <View className="publish-time font-size-12 m-b-10 align-center color-gray">
-                {detail.courseAuthor} {detail.courseBefrom} {detail.courseTime}
-            </View>
             <View className="rich-text m-t-10 m-b-10">
                 <RichText nodes={detail.courseContent} />
             </View>

@@ -1,4 +1,1 @@
-.course-detail .thumb {
-  width: 100% !important;
-}
-
+.course-detail .thumb{width:100%!important}

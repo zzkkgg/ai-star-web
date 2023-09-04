@@ -1,7 +1,1 @@
-[src] {
-  max-width: 100%;
-}
-.game-detail .thumb {
-  width: 100% !important;
-}
-
+[src]{max-width:100%}.game-detail .thumb{width:100%!important}

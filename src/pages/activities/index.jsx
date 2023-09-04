@@ -1,4 +1,5 @@
 import request from '@/utils/request';
+import Banner from '@/components/Banner';
 import { navigateTo } from '@tarojs/taro';
 import { useState, useEffect } from 'react';
 import EntityCard from '@/components/EntityCard';
@@ -16,6 +17,7 @@ export default function Activities() {
     const [loading, setLoading] = useState(false);
     const [pageTotal, setPageTotal] = useState(0);
     const [timeStamp, setTimeStamp] = useState('');
+    const [bannerUrls, setBannerUrls] = useState(null);
     const [activeTabIndex, setActiveTabIndex] = useState(0);
     
     function updateTimeStamp() {
@@ -38,6 +40,22 @@ export default function Activities() {
     }
     
     useEffect(fetchList, [timeStamp]);
+    useEffect(fetchBanner, []);
+
+    function fetchBanner() {
+        request.get({
+            url: '/api/banner/list',
+            data: {
+                bannerType: 1,
+                page: 1,
+                size: 5,
+            },
+        }).then(({ data }) => {
+            if (Array.isArray(data?.list)) {
+                setBannerUrls(data.list);
+            }
+        });
+    }
 
     function hasMore() {
         if (list == null || current < pageTotal) {
@@ -65,8 +83,8 @@ export default function Activities() {
 
     return (
         <View className="activities font-size-14">
-            <View className="banner" />
-            <View className="tabs align-center m-t-20 m-b-20">
+            <Banner bannerUrls={bannerUrls} />
+            <View className="tabs align-center m-t-15 m-b-15">
                 <Text
                     onClick={() => {
                         setActiveTabIndex(0);
