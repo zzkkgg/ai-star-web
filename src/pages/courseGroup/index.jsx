@@ -49,7 +49,7 @@ function CourseGroup() {
             },
         }).then(({ data }) => {
             setPageTotal(data?.pages);
-            setCourseList(data?.list);
+            setCourseList((courseList || []).concat(data?.list || []));
         });
     }
     useEffect(() => {

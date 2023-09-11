@@ -1,2 +1,120 @@
-.font-bold{font-weight:600}.font-size-12{font-size:12PX}.font-size-14{font-size:14PX}.font-size-16{font-size:16PX}.font-size-18{font-size:18PX}.font-size-20{font-size:20PX}.font-size-24{font-size:24PX}.underline{text-decoration:underline}.color-white{color:#fff}.color-gray{color:#999}.bg-gray{background:#e8e8e8}.color-black{color:#333}.align-center,.rich-text [class=ql-align-center]{text-align:center}.full-height{height:100%}.container{-webkit-box-sizing:border-box;box-sizing:border-box;padding:10PX}.m-l-5{margin-left:5PX}.m-l-10{margin-left:10PX}.m-t-5{margin-top:5PX}.m-t-10{margin-top:10PX}.m-t-15{margin-top:15PX}.m-t-20{margin-top:20PX}.m-r-20{margin-right:20PX}.m-b-10{margin-bottom:10PX}.m-b-15{margin-bottom:15PX}.m-b-20{margin-bottom:20PX}.pos-relative{position:relative}.btn::after{display:none}.flex-1{-webkit-flex:1;-ms-flex:1;flex:1}[src]{max-width:100%}.banner{width:100%!important}.rich-text{-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-size:16PX;text-align:left;line-height:2.25em;white-space:pre-wrap;word-wrap:break-word;color:#606266;font-family:system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Arial,sans-serif}.rich-text p{clear:both;min-height:1em}page{font-family:Microsoft YaHei}
+.font-bold {
+  font-weight: 600;
+}
+.font-size-12 {
+  font-size: 12PX;
+}
+.font-size-14 {
+  font-size: 14PX;
+}
+.font-size-16 {
+  font-size: 16PX;
+}
+.font-size-18 {
+  font-size: 18PX;
+}
+.font-size-20 {
+  font-size: 20PX;
+}
+.font-size-24 {
+  font-size: 24PX;
+}
+.underline {
+  text-decoration: underline;
+}
+.color-white {
+  color: #fff;
+}
+.color-gray {
+  color: #999;
+}
+.bg-gray {
+  background: #e8e8e8;
+}
+.color-black {
+  color: #333;
+}
+.align-center {
+  text-align: center;
+}
+.full-height {
+  height: 100%;
+}
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10PX;
+}
+.m-l-5 {
+  margin-left: 5PX;
+}
+.m-l-10 {
+  margin-left: 10PX;
+}
+.m-t-5 {
+  margin-top: 5PX;
+}
+.m-t-10 {
+  margin-top: 10PX;
+}
+.m-t-15 {
+  margin-top: 15PX;
+}
+.m-t-20 {
+  margin-top: 20PX;
+}
+.m-r-20 {
+  margin-right: 20PX;
+}
+.m-b-10 {
+  margin-bottom: 10PX;
+}
+.m-b-15 {
+  margin-bottom: 15PX;
+}
+.m-b-20 {
+  margin-bottom: 20PX;
+}
+.pos-relative {
+  position: relative;
+}
+.btn::after {
+  display: none;
+}
+.flex-1 {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+[src] {
+  max-width: 100%;
+}
+.banner {
+  width: 100% !important;
+  border-radius: 5PX;
+}
+.rich-text {
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  font-size: 16PX;
+  text-align: left;
+  line-height: 2.25em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #606266;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;
+}
+.rich-text p {
+  clear: both;
+  min-height: 1em;
+}
+.rich-text [class="ql-align-center"] {
+  text-align: center;
+}
+page {
+  font-family: Microsoft YaHei;
+}
+
+
 @import "./common.wxss";

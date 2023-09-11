@@ -1,1 +1,26 @@
-.entity-card,.entity-card .content{display:-webkit-flex;display:-ms-flexbox;display:flex}.entity-card{color:#666;background:#fff;-webkit-box-shadow:0 0 4PX 0 rgba(1,6,27,.2);box-shadow:0 0 4PX 0 rgba(1,6,27,.2)}.entity-card .content{padding:10PX;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.entity-card+.entity-card{margin-top:10PX}.infinite-scroll-holder{padding:10PX}
+.entity-card {
+  color: #666666;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0PX 0PX 4PX 0PX rgba(1, 6, 27, 0.2);
+          box-shadow: 0PX 0PX 4PX 0PX rgba(1, 6, 27, 0.2);
+}
+.entity-card .content {
+  padding: 10PX;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.entity-card + .entity-card {
+  margin-top: 10PX;
+}
+
+.infinite-scroll-holder {
+  padding: 10PX;
+}
+
